@@ -14,6 +14,7 @@ typedef enum {
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit);
 BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC);
+TemperatureRange getTemperatureRange(CoolingType coolingType);
 
 typedef enum {
   TO_CONTROLLER,
@@ -28,5 +29,4 @@ typedef struct {
 void checkAndAlert(
   AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
 
-void sendToController(BreachType breachType);
-void sendToEmail(BreachType breachType);
+Void sendalret(AlertTarget alretTarget, BreachType breachType) ;
